@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .chart-container {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis Results</h1>
+    
+    <div class="chart-container">
+        <h2>Sentiment Distribution</h2>
+        <div>{{ analysis.pie_chart_html|safe }}</div>
+    </div>
+
+    <div class="chart-container">
+        <h2>Sentiment Counts</h2>
+        <div>{{ analysis.bar_chart_html|safe }}</div>
+    </div>
+
+    <div class="chart-container">
+        <h2>Average Review Length (Positive vs. Negative)</h2>
+        <div>{{ analysis.avg_length_chart_html|safe }}</div>
+    </div>
+
+    <a href="/">Upload Another File</a>
+</body>
+</html>
